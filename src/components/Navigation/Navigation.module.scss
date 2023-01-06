@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: $gray;
+    padding: 0 80px;
+
+    .buttons {
+        display: flex;
+
+        > a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #767379;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            width: 50px;
+    
+            &:first-child {
+                margin-right: 30px;
+            }
+
+            > svg {
+                font-size: 24px;
+            }
+        }
+    }
+}

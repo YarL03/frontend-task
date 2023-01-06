@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.wrapper {
+    position: relative;
+
+    .heading {
+        margin: 20px 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    > div:nth-child(2) {
+        margin-top: 48px;
+    }
+
+    input {
+        border: 1px solid #fff;
+        background-color: rgba(103, 101, 105, .2);
+        color: #fff;
+        outline: none;
+        padding: 15px 40px 15px 10px;
+        width: calc(100vw / 2 - 180px);
+        font-size: 18px;
+
+        &::placeholder {
+            color: darken(#fff, 5%)
+        }
+
+        &:focus {
+            background-color: #fff;
+            color: $gray;
+        }
+
+    }
+
+    input + button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 0 20px;
+        cursor: pointer;
+        transition: background-color .1s;
+
+        &:hover {
+            background-color: darken($green, 5%);
+        }
+
+        > svg {
+            margin-left: 5px;
+        }
+    }
+}

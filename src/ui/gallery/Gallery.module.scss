@@ -1,0 +1,129 @@
+@import '../../styles/variables';
+
+.gallery {
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+    padding: 12px 0;
+    height: fit-content;
+    z-index: 10;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.item {
+    position: relative;
+    transition: transform ease-in-out .2s;
+    border-radius: 12.8px;
+    margin-bottom: 32px;
+    padding: 0 10px;
+
+    .badges {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+
+        > span {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    > a {
+        width: fit-content;
+        height: fit-content;
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+
+    img {
+        height: 176px;
+        width: 350px;
+        object-position: center;
+        object-fit: cover;
+        pointer-events: none;
+        border-radius: 6px;
+    }
+
+    .details {
+        width: 100%;
+        height: 176px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn .3s;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 6px;
+
+        > button {
+            border: 2px solid #a8ffcf;
+            outline: none;
+            background: transparent;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #a8ffcf;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            cursor: pointer;
+
+            > svg {
+                font-size: 24px;
+            }
+        }
+
+    }
+
+    .description {
+
+        > div:nth-child(2) {
+            margin: 5px 0;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #fff;
+            text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        }
+
+        .requisites {
+            font-size: 16px;
+            font-weight: 600;
+            color: #c1bec3;
+        }
+
+        .genres {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+
+    }
+
+    
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

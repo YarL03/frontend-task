@@ -1,0 +1,19 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 184px;
+    position: relative;
+
+    .clean {
+        position: absolute;
+        right: calc(100vw / 2 - 420px);
+        top: 15px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        > svg {
+            font-size: 18px;
+        }
+    }
+}
